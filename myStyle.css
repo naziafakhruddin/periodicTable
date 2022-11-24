@@ -1,0 +1,281 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+  }
+  /*Body*/
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:400;
+    background-color:white;
+    width:100vw;
+    height:100vh;
+  }
+  /*Main heading*/
+  h1{
+    text-align:center;
+    padding:50px;
+  }
+  /*Image is set to display none*/
+  #image{
+    display:none;
+  }
+  /*flex-container inside which all the containers
+   and flex-items are present*/
+  .flex-container{
+     margin:300px 100px;
+     display:flex;
+     justify-content:center;
+     flex-wrap:wrap;
+     column-gap:2px;
+  }
+  /*Containers containing groups of elements*/
+  .container-1{ 
+    width:100%;
+    margin:auto;
+    background-color: white;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  .container-2{ 
+    width:100%;
+    margin:20px auto 2px auto;
+    background-color: white;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  .container-3{ 
+    width:100%;
+    margin-top:0;
+    background-color: white;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:flex-start;
+  }
+  /*div inside the containers showing elements symbols*/
+  .flex-item{
+    display:flex;
+    flex-direction:row;
+    width:60px;
+    height:60px;
+    margin:2px;
+    text-align:center;
+    padding:8px 20px;
+    border:2px solid #ddd;
+  }
+  .flex-item:hover{
+    font-size:18px;
+    border:2px solid #333;
+    box-shadow:10px 10px 2px #ddd;
+  }
+
+  /*empty div inside the containers for creating spaces 
+  between the different groups of elements*/
+  .empty{
+    display:flex;
+    flex-direction:row;
+    width:60px;
+    height:60px;
+    margin:2px;
+    text-align:center;
+    font-size:14px;
+    padding:15px;
+    border-radius:10px;
+  }
+  span{
+    display:flex;
+    flex-direction:column;
+    color:black;
+  }
+  sup,sub{
+    font-size:12px;
+  }
+/* Background colour is set for each group of elements*/ 
+  .container-1 .alkali-metals {
+      background-color:rgb(250, 220, 225);
+  }
+  .container-1 .alkaline-metals{
+      background-color:rgb(238, 209, 238);
+  }
+  .container-1 .transition{
+    background-color:rgb(196, 212, 233);
+  }
+  .container-1 .metalloid{
+      background-color:rgb(211, 218, 195);
+  }
+  .container-1 .post-trans{
+      background-color:rgb(212, 238, 205);
+  }
+  .container-1 .non-metal{
+      background-color:rgb(248, 248, 222);
+  }
+  .container-1 .noble{
+      background-color:rgb(243, 231, 214);
+  } 
+  .container-2 .lan{
+      background-color:lightcyan;
+  } 
+  .container-3 .act{
+      background-color:rgb(216, 241, 235);
+  } 
+
+/* Media Queries for breakpoints 1390px, 991px, 814px, 720px */
+@media (max-width:1390px){
+    /*Main container*/
+    .flex-container{ 
+      margin:300px 0;
+      display:flex;
+      justify-content:space-around;  
+    }
+    .container-1{ 
+      width:100%;
+      padding:0px;
+    }
+    .container-2{ 
+      width:100%;
+      margin:10px auto 1px auto;
+    }
+    .container-3{ 
+      width:100%; 
+    }
+  /*div inside the containers showing elements symbols*/
+    .flex-item{
+      width:50px;
+      height:50px;
+      font-size:14px;
+      padding:1px 15px;
+      text-align:center;
+    }
+    .flex-item:hover{
+      font-size:15px;
+      border:2px solid #777;
+    }
+    span{
+      padding:1px;
+    }
+    sup,sub{
+      font-size:11px;
+    }
+  /*empty div inside the containers for creating spaces 
+  between the different groups of elements*/
+    .empty{
+      width:50px;
+      height:50px;
+    }  
+}
+@media (max-width:1010px){
+    h1{
+      padding:20px;
+    }
+    /*Main container*/
+    .flex-container{ 
+      margin:300px 0px;
+      display:flex;
+      justify-content:space-around;   
+    }
+    /*Containers of group of elements*/
+    .container-1{ 
+      width:100%;
+      padding:0px;
+    }
+    .container-2{ 
+      width:100%;
+      margin:10px auto 1px auto;
+    }
+    .container-3{ 
+      width:100%; 
+    }
+    /*div inside the containers showing elements symbols*/
+    .flex-item{
+      width:40px;
+      height:40px;
+      font-size:12px;
+      padding:1px 10px;
+    }
+    .flex-item:hover{
+      font-size:13px;
+      border:2px solid #777;
+    }
+    span{
+      padding:1px;
+    }
+    sup,sub{
+      font-size:9px;
+    }
+    /*empty div inside the containers for creating spaces 
+    between the different groups of elements*/
+    .empty{
+      width:40px;
+      height:40px;
+    }  
+}
+@media (max-width:824px){
+  /*Main heading*/
+    h1{
+      padding:20px;
+    }
+  /*Main container*/
+    .flex-container{ 
+      margin:300px 0;  
+    }
+    /*Containers of group of elements*/
+    .container-1{ 
+      width:100%;
+    }
+    .container-2{ 
+      width:100%;
+      margin:5px auto 1px auto;
+    }
+    .container-3{ 
+      width:100%;
+    }
+    /*div inside the containers showing elements symbols*/
+    .flex-item{
+      width:35px;
+      height:35px;
+      font-size:10px;
+    }
+    .flex-item:hover{
+      font-size:11px;
+      border:2px solid #777;
+    }
+    span{
+      padding:1px;
+    }
+    sup,sub{
+      font-size:7px;
+    }
+    /*empty div inside the containers for creating spaces 
+    between the different groups of elements*/
+    .empty{
+      width:35px;
+      height:35px;
+    }
+  }
+  @media (max-width:794px){
+      /*Main container*/
+    .flex-container{ 
+      margin:8px;
+      /* display is set to none responsive periodic table in 
+      flex is replaced with an image */
+      display:none;  
+    }
+    /*image is now displayed as block
+     @ breakpoint of 720px insde a div. image size is set to 98%
+     (so the image remains responsive*/
+    #image{
+      display:block;
+      width:100%;
+    }
+    #image img{
+      width:98%;
+      position:absolute;
+      top:30%;
+      left:2%;
+    }
+  }
